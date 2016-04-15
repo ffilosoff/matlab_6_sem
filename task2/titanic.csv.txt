@@ -1,0 +1,8 @@
+Males: 577
+Females: 314
+Survived: 549
+First class: 0.242424
+Average age: 29.754558
+Median age: 24
+Correlation: 0.414838
+Most frequent name: Anna
