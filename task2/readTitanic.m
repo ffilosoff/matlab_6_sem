@@ -1,4 +1,4 @@
-function [list]=readTitanic()
+function []=readTitanic()
     file = 'titanic.csv';
     f = fopen(file);
     w = fopen(strcat(file,'.txt'),'w');
@@ -16,7 +16,7 @@ function [list]=readTitanic()
     fprintf(w,'Males: %i\n',sum(strcmp('male',person{5})));
     disp(['Female: ' num2str(sum(strcmp('female',person{5})))]);
     fprintf(w,'Females: %i\n',sum(strcmp('female',person{5})));
-    disp(['Survived: ' num2str(double(sum(~person{2}))./ALL)]);
+    disp(['Survived: ' num2str(double(sum(person{2}))./ALL)]);
     fprintf(w,'Survived: %i\n',double(sum(~person{2})));
     disp(['First class: ' num2str(sum((1==person{3}))/ALL)]);
     fprintf(w,'First class: %f\n',sum((1==person{3}))/ALL);
